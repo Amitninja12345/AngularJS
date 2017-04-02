@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html data-ng-app="calculatorApp">
+<head>
+<meta charset="UTF-8">
+<title> Clock App</title>
+
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="angularDemo.js"></script>
+
+</head>
+
+<h1> Calculator App</h1>
+
+<div data-ng-controller="CalculatorCtrl as ctrl">
+
+<input type="text" data-ng-model="ctrl.input1"></input>
+
+<span data-ng-bind="ctrl.selectedOperation"></span>
+
+<input type="text" data-ng-model="ctrl.input2"></input>
+
+<button data-ng-click="ctrl.computeResult()">=</button>
+<span data-ng-bind="ctrl.resultValue"></span>
+<p>
+
+  Choose operation:
+  
+    <button data-ng-click="ctrl.buttonClicked('+')">+</button>
+    <button data-ng-click="ctrl.buttonClicked('-')">-</button>
+    <button data-ng-click="ctrl.buttonClicked('*')">*</button>
+    <button data-ng-click="ctrl.buttonClicked('/')">/</button>
+  </p>
+
+
+<input type="checkbox" data-ng-model="ctrl.checked1"></input>
+
+<p data-ng-hide="ctrl.checked1"> Some Content</p>
+   
+   
+  
+   <div data-ng-repeat="obj in ctrl.myList">
+   <p> 
+   
+   Name: {{obj.name}}</p>
+   
+    <p> 
+   
+   Name: {{obj.age}}</p>
+   
+   <hr>
+   
+   </div>
+   
+</div>
+
+
+</body>
+
+
+</html>
